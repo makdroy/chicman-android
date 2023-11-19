@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">chicman-android</string>
+
+    <!-- Main Tab -->
+    <string name="main_tab_home">Home</string>
+    <string name="main_tab_store">Store</string>
+    <string name="main_tab_search">Search</string>
+    <string name="main_tab_settings">Settings</string>
+    <!-- -->
+
 </resources>
