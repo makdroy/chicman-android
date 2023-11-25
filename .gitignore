@@ -2,6 +2,16 @@
 *.iml
 .idea/
 
+# Generated files
+bin/
+gen/
+out/
+build/
+*/build/
+*/debug/
+*/release/
+output-metadata.json
+
 # Gradle files
 *.gradle/
 
