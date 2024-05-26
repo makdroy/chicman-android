@@ -1,40 +1,18 @@
 package com.chicman.android.features.details
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
+import com.chicman.android.R
+import com.chicman.android.base.BaseFragment
 import com.chicman.android.databinding.FragmentDetailsBinding
 
-class DetailsFragment : Fragment() {
+class DetailsFragment : BaseFragment<FragmentDetailsBinding>() {
 
-    companion object {
-        @Suppress("UNUSED")
-        @JvmStatic
-        fun newInstance() = DetailsFragment()
+    private val args: DetailsFragmentArgs by navArgs()
+    private val name: String? by lazy { args.contentName }
+
+    override fun getLayoutId(): Int = R.layout.fragment_details
+
+    override fun setupData() {
+        binding.contentName = name?.trim() ?: ""
     }
-
-    private var _binding: FragmentDetailsBinding? = null
-    private val binding: FragmentDetailsBinding
-        get() = _binding!!
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-////        arguments?.let { }
-//    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentDetailsBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//    }
-
 }
