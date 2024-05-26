@@ -20,5 +20,4 @@
         android:id="@+id/settingsFragment"
         android:icon="@drawable/ic_baseline_coronavirus_24"
         android:title="@string/main_tab_settings" />
-
 </menu>

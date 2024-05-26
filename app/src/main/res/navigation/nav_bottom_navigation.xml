@@ -2,18 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/storeFragment">
+    android:id="@+id/navBottomNavigation"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.chicman.android.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/storeFragment"
         android:name="com.chicman.android.StoreFragment"
         android:label="fragment_store"
-        tools:layout="@layout/fragment_store">
-        <action
-            android:id="@+id/action_storeFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_store" />
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.chicman.android.SearchFragment"
@@ -24,9 +25,4 @@
         android:name="com.chicman.android.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
-    <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.chicman.android.features.details.DetailsFragment"
-        android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
 </navigation>
